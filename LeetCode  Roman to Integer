@@ -1,0 +1,27 @@
+// https://leetcode.com/problems/roman-to-integer/
+
+//Solution
+
+var romanToInt = function(s) {
+    
+    let sum = 0;
+    
+    let romMap = new Map();
+    
+    romMap.set(`I`, 1);
+    romMap.set(`V`, 5);
+    romMap.set(`X`, 10);
+    romMap.set(`L`, 50);
+    romMap.set(`C`, 100);
+    romMap.set(`D`,500);
+    romMap.set(`M`, 1000);
+    
+    for (let i = 0; i < s.length; i++){
+        if(romMap.get(s.charAt(i)) < romMap.get(s.charAt(i + 1))){
+            sum -= romMap.get(s.charAt(i))
+        }else{
+            sum += romMap.get(s.charAt(i))
+        }
+    }
+    return sum;
+};
