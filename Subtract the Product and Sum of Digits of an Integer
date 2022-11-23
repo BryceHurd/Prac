@@ -1,0 +1,17 @@
+//Given an integer number n, return the difference between the product of its digits and the sum of its digits.
+
+//Solution
+
+var subtractProductAndSum = function(n) {
+    let sum = 0;
+    let prod = 1;
+    
+    n = n.toString().split("").map(Number);   
+    
+    for (let i = 0; i < n.length; i++){
+        sum += n[i];       
+        prod *= n[i];       
+    }    
+    
+    return prod - sum;    
+};
