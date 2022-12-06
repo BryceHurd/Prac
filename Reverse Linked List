@@ -1,0 +1,16 @@
+// Given the head of a singly linked list, reverse the list, and return the reversed list.
+// Solution
+var reverseList = function(head) {
+
+    let temp = null
+    let newHead = null;
+
+    while(head !== null){
+        temp = head;
+        head = head.next;
+        temp.next = newHead;
+        newHead = temp;
+    }
+    return newHead
+    
+};
