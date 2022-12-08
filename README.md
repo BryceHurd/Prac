@@ -1,4 +1,4 @@
-# Daily Practice of Codewars challenges & LeetCode challenges
+# Practice of Codewars challenges & LeetCode challenges
 
 
 
