@@ -17,3 +17,16 @@ function solution(str){
   return arry; 
    
 }
+
+// Another Solution
+
+function solution(str){
+  let arry = [];
+  str.split("");
+  
+  for (let i = 0; i < str.length; i += 2){
+    arry.push(str[i] + (str[i + 1] || `_`))  
+  }
+  return arry; 
+   
+}
