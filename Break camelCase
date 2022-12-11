@@ -1,0 +1,15 @@
+// Complete the solution so that the function will break up camel casing, using a space between words
+// Solution
+function solution(string) { 
+  
+  let arry = string.split('');
+  
+  for (let i = 0; i < arry.length; i++) {
+    if (arry[i].toLowerCase() == arry[i]){continue}
+    else{
+    arry.splice(i, 0, " ");
+    i++;
+    }
+  }
+  return arry.join('');
+}
